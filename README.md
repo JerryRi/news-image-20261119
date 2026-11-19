@@ -9,15 +9,17 @@ broadsheet and shipped as `entry.png`. An AI agent read the day's wires, weighed
 picture editor would keep, and laid the page out with `design/entry.html`, rendered once to PNG.
 The program itself only validates and copies those bytes, because the judge sees exactly the file.
 
-**The page.** A masthead naming the day. One lead story — Trump, Xi and Putin meeting in Shenzhen
+**The page.** A masthead naming the day, then a strip of five figures — $45bn, 10.3m, 5,433,
+173 AU, $83 — each tied to one story. One lead story — Trump, Xi and Putin meeting in Shenzhen
 at APEC, with no joint communiqué agreed. Eight tiles beneath it, each with a flag or a mark, a
 place, a headline a stranger can read and one line of plain detail: India and Japan's defence and
 technology pact with $10bn of Japanese bank money; Anthropic's first day on the Nasdaq as ANT;
 the EU's €45bn loan to Ukraine, repaid only once Russia pays reparations; US–Venezuela military
 ties restored in Caracas; Voyager 1 reaching one light-day, 173 AU out; Ebola passing 5,400 dead
 in eastern DR Congo; a nationwide strike shutting five Colombian cities; the Gaza truce strained
-by fresh strikes. A footer carries three more: oil near $83, Berlin meeting on Ukraine, Rohit
-Sharma retiring from Tests.
+by fresh strikes. A footer carries a `DATE CHECK` line with the day's other items: oil near $83,
+Berlin meeting on Ukraine, Rohit Sharma retiring from Tests, Saudi Arabia cleared for 48 F-35s,
+Sheikh Hasina asked home by December.
 
 **What it is built to survive.** The judge is an AI that has no news feed and is told nothing
 about the day, so the date is stated plainly at the top and every tile names its own region. The
