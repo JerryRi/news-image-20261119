@@ -199,16 +199,29 @@ NUMBERS = [
 
 ALSO = [
     ("AMERICAS", "Seattle &#183; Amazon pledges $7bn for Indian renewables by 2030."),
-    ("AMERICAS", "Caracas &#183; Hegseth signs a training and intelligence accord."),
-    ("AMERICAS", "Washington &#183; Jeffries wins the Democratic speaker nomination."),
+    ("AMERICAS", "Caracas &#183; Hegseth signs a joint training and intelligence accord."),
+    ("AMERICAS", "Washington &#183; Jeffries wins the Democratic speaker nomination, 251-11."),
+    ("AMERICAS", "New York &#183; Juan Mata retires after a 23-year career."),
     ("EUROPE", "London &#183; Brent settles near $83 after the Gulf strikes."),
+    ("EUROPE", "Berlin &#183; Merz hosts the coalition of the willing on Ukraine funding."),
+    ("EUROPE", "Antalya &#183; ministers agree a $120bn a year adaptation goal."),
+    ("EUROPE", "The Hague &#183; the ICJ hears the last submissions in the Gambia's case."),
     ("ASIA-PACIFIC", "Shenzhen &#183; Xi and Takaichi shake hands on the summit's fringe."),
-    ("AMERICAS", "New York &#183; Juan Mata retires after twenty seasons."),
-    ("MIDEAST", "Sanaa &#183; Houthis claim a missile strike on Saudi Arabia."),
+    ("ASIA-PACIFIC", "Shenzhen &#183; China pledges $20m for APEC cooperation projects."),
+    ("ASIA-PACIFIC", "Shenzhen &#183; a research centre for the Asia-Pacific community is set up."),
+    ("ASIA-PACIFIC", "New Delhi &#183; Modi and Takaichi agree a chips and minerals corridor."),
+    ("ASIA-PACIFIC", "Odisha &#183; red alerts remain as the cyclone moves inland."),
+    ("ASIA-PACIFIC", "Manila &#183; the Philippines and China trade notes on the shoal."),
     ("OCEANIA", "Auckland &#183; New Zealand gets GTA VI at midnight, first in the world."),
-    ("ASIA-PACIFIC", "New Delhi &#183; Modi and Takaichi agree a chip and minerals corridor."),
-    ("EUROPE", "Berlin &#183; the coalition of the willing meets on Ukraine funding."),
+    ("MIDEAST", "Sanaa &#183; Houthis claim a missile strike on Saudi Arabia."),
+    ("MIDEAST", "Kuwait City &#183; air defences engage drones over the northern fields."),
+    ("MIDEAST", "Manama &#183; a leading Shia cleric is stripped of citizenship."),
+    ("AFRICA", "Nairobi &#183; a court blocks a disputed finance bill."),
+    ("AFRICA", "Kinshasa &#183; the outbreak response is short of beds in two provinces."),
+    ("WORLD", "Geneva &#183; the WHO keeps the Ebola emergency at its highest tier."),
+    ("WORLD", "Kerch &#183; a fallen span keeps the Azov lane shut for a third day."),
 ]
+
 
 EXCLUDED = ("The Iranian drone interceptions and the EU's first draft of the loan were "
             "reported on 18 November, the Kerch span fell on the 17th and the gas tanker sank "
@@ -324,15 +337,15 @@ def build():
   .det {{ font-size:9px; line-height:1.16; margin-top:1px; color:#463e32; }}
   .det b {{ color:{RED}; }}
 
-  .lower {{ display:grid; grid-template-columns:250px 1fr; gap:14px; padding-top:6px;
+  .lower {{ display:grid; grid-template-columns:236px 1fr; gap:13px; padding-top:6px;
             margin-top:auto; border-top:2.5px solid {INK}; flex:0 0 auto; }}
   .maplab {{ font-size:7.6px; font-weight:700; letter-spacing:1.2px; color:{RED};
              text-transform:uppercase; margin-bottom:2px; }}
   .mapkey {{ font-size:7.4px; line-height:1.2; color:{MUTED}; margin-top:2px; }}
   .also h3 {{ font-size:8.2px; font-weight:700; letter-spacing:1.3px; color:{RED};
               text-transform:uppercase; margin-bottom:2px; }}
-  .also .items {{ column-count:3; column-gap:11px; }}
-  .also .items div {{ font-size:8.4px; line-height:1.24; color:#463e32; break-inside:avoid;
+  .also .items {{ column-count:4; column-gap:10px; }}
+  .also .items div {{ font-size:8px; line-height:1.2; color:#463e32; break-inside:avoid;
                       margin-bottom:1px; }}
 
   .datecheck {{ border:2px solid {BRIGHT}; margin-top:6px; margin-bottom:5px; flex:0 0 auto;
@@ -364,8 +377,8 @@ def build():
   <div class="lower">
     <div>
       <div class="maplab">Where it happened</div>
-      <svg width="250" height="132" viewBox="0 0 250 132" xmlns="http://www.w3.org/2000/svg">
-        {dot_map(250, 128)}
+      <svg width="236" height="124" viewBox="0 0 236 124" xmlns="http://www.w3.org/2000/svg">
+        {dot_map(236, 120)}
       </svg>
       <div class="mapkey">Red numbers mark the stories on this page; grey dots mark the briefs
         listed beside the map. Positions are approximate.</div>
