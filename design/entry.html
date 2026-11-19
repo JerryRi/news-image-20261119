@@ -2,81 +2,42 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>19 Nov 2026</title>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   html, body { width:1024px; height:1024px; overflow:hidden; background:#f2ebdd; }
   .page { width:1024px; height:1024px; background:#f2ebdd; color:#12100b;
     font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding:16px 26px 0; display:flex; flex-direction:column; }
-
-  .mast { border-bottom:6px solid #12100b; padding-bottom:6px; flex:0 0 auto; }
-  .kick { font-size:12px; font-weight:700; letter-spacing:3.4px; color:#9e2018; }
+    padding:20px 28px 0; display:flex; flex-direction:column; }
+  .mast { border-bottom:6px solid #12100b; padding-bottom:7px; flex:0 0 auto; }
+  .kick { font-size:13px; font-weight:700; letter-spacing:3.5px; color:#9e2018; }
   .mastrow { display:flex; align-items:flex-end; justify-content:space-between; }
-  .date { font-family:"Arial Black", Helvetica, sans-serif; font-size:50px; line-height:.94;
-          letter-spacing:-1.2px; }
-  .date i { font-style:normal; font-size:21px; letter-spacing:0; }
-  .side { text-align:right; padding-bottom:5px; }
-  .side b { display:block; font-size:13px; letter-spacing:2.6px; }
-  .side span { display:block; font-size:10px; letter-spacing:1.3px; color:#6d6355; margin-top:2px; }
-
-  .nums { display:grid; grid-template-columns:repeat(6,1fr); border-bottom:3px solid #12100b;
-          flex:0 0 auto; }
-  .num { padding:7px 10px 6px 0; border-right:1px solid #c4b8a1; }
-  .num:last-child { border-right:0; }
-  .num b { display:block; font-family:"Arial Black", Helvetica, sans-serif; font-size:24px;
-           letter-spacing:-.6px; line-height:1; }
-  .num b em { font-style:normal; font-size:13px; letter-spacing:0; color:#9e2018; }
-  .num span { display:block; font-size:7.6px; font-weight:700; letter-spacing:.9px;
-              text-transform:uppercase; color:#5f5647; margin-top:3px; line-height:1.25; }
-
-  .lead { display:flex; gap:14px; padding:9px 0 10px; border-bottom:3px solid #12100b; flex:0 0 auto; }
+  .date { font-family:"Arial Black", Helvetica, sans-serif; font-size:62px; line-height:.94;
+          letter-spacing:-1.4px; }
+  .date i { font-style:normal; font-size:24px; letter-spacing:0; }
+  .side { text-align:right; padding-bottom:6px; }
+  .side b { display:block; font-size:14px; letter-spacing:2.8px; }
+  .side span { display:block; font-size:10.5px; letter-spacing:1.4px; color:#6d6355; margin-top:3px; }
+  .lead { display:flex; gap:15px; padding:10px 0 11px; border-bottom:3px solid #12100b; flex:0 0 auto; }
   .leadart { width:392px; flex:0 0 392px; }
   .leadcopy { flex:1; display:flex; flex-direction:column; justify-content:center; }
-  .tag { align-self:flex-start; background:#12100b; color:#f2ebdd; font-size:10px;
-         font-weight:700; letter-spacing:1.9px; padding:3px 7px 2px; }
-  .hl { font-family:"Arial Black", Helvetica, sans-serif; font-size:29px; line-height:1.03;
-        letter-spacing:-.6px; margin-top:6px; }
-  .sub { font-size:12.5px; line-height:1.28; margin-top:6px; color:#332c22; }
-
-  .grid { display:grid; grid-template-columns:repeat(4,1fr); gap:7px 13px;
-          padding-top:8px; flex:1 1 auto; align-content:start; }
+  .tag { align-self:flex-start; background:#12100b; color:#f2ebdd; font-size:10.5px;
+         font-weight:700; letter-spacing:2px; padding:3px 7px 2px; }
+  .hl { font-family:"Arial Black", Helvetica, sans-serif; font-size:32px; line-height:1.02;
+        letter-spacing:-.7px; margin-top:6px; }
+  .sub { font-size:13.5px; line-height:1.29; margin-top:6px; color:#332c22; }
+  .grid { display:grid; grid-template-columns:repeat(4,1fr); grid-template-rows:auto auto;
+          gap:8px 14px; padding-top:9px; flex:1 1 auto; }
   .tile { display:flex; flex-direction:column; border-top:3px solid #12100b; padding-top:4px; }
-  .art { height:150px; flex:0 0 150px; }
-  .place { font-size:8.4px; font-weight:700; letter-spacing:1.2px; color:#9e2018;
+  .art { height:212px; flex:0 0 212px; }
+  .place { font-size:9px; font-weight:700; letter-spacing:1.3px; color:#9e2018;
            text-transform:uppercase; margin-top:5px; }
-  .chip { display:inline-block; background:#12100b; color:#f2ebdd; font-size:7.6px;
-           padding:1px 3px; margin-right:4px; letter-spacing:0; }
-  .lab { font-family:"Arial Black", Helvetica, sans-serif; font-size:16px; line-height:1.05;
-         letter-spacing:-.2px; margin-top:2px; }
-  .det { font-size:10px; line-height:1.17; margin-top:3px; color:#453d31; }
-
-  .band { display:flex; gap:14px; border-top:3px solid #12100b; padding-top:7px;
-          flex:0 0 auto; margin-top:7px; }
-  .mapwrap { width:262px; flex:0 0 262px; }
-  .reg { display:flex; align-items:baseline; gap:6px; padding:2.5px 0;
-          border-bottom:1px solid #d5c9b2; }
-  .reg:last-child { border-bottom:0; }
-  .regname { flex:0 0 74px; font-size:8.6px; font-weight:700; letter-spacing:1.1px;
-              text-transform:uppercase; color:#12100b; }
-  .regnums { flex:0 0 auto; font-size:6.6px; font-weight:700; color:#f2ebdd;
-              background:#9e2018; padding:1px 3px; letter-spacing:.6px; }
-  .regtext { flex:1; font-size:8.4px; line-height:1.22; color:#5f5647; }
-  .maplab { font-size:8.4px; font-weight:700; letter-spacing:1.2px; color:#9e2018;
-            text-transform:uppercase; margin-bottom:4px; }
-  .also { flex:1; }
-  .also h3 { font-size:9px; font-weight:700; letter-spacing:1.6px; color:#9e2018;
-             text-transform:uppercase; margin-bottom:4px; }
-  .also .items { display:grid; grid-template-columns:repeat(3,1fr); gap:0 12px; }
-  .also .items div { font-size:9.2px; line-height:1.3; color:#5f5647; }
-  .also .items div b { color:#12100b; }
-
-  .foot { flex:0 0 auto; border-top:1px solid #8d8271; padding:5px 0 6px; margin-top:auto;
-          display:flex; justify-content:space-between; align-items:baseline; gap:18px; }
-  .foot .a { font-size:8.6px; line-height:1.3; letter-spacing:.5px; color:#5f5647; }
-  .foot .a b { color:#9e2018; letter-spacing:1.2px; }
-  .foot .b { font-size:9px; letter-spacing:1.1px; color:#9e2018; font-weight:700;
-             white-space:nowrap; }
+  .lab { font-family:"Arial Black", Helvetica, sans-serif; font-size:17.5px; line-height:1.05;
+         letter-spacing:-.3px; margin-top:2px; }
+  .det { font-size:10.5px; line-height:1.18; margin-top:3px; color:#453d31; }
+  .foot { flex:0 0 auto; border-top:1px solid #8d8271; padding:5px 0 7px; margin-top:auto;
+          display:flex; justify-content:space-between; align-items:baseline; }
+  .foot .a { font-size:9.5px; letter-spacing:1.2px; color:#5f5647; }
+  .foot .b { font-size:9.5px; letter-spacing:1.2px; color:#9e2018; font-weight:700; }
 </style>
 </head>
 <body>
@@ -86,235 +47,256 @@
     <div class="kick">ONE DAY · ONE IMAGE · THE WORLD'S NEWS</div>
     <div class="mastrow">
       <div class="date">19&nbsp;NOV<i>&nbsp;2026</i></div>
-      <div class="side"><b>THURSDAY</b><span>18 STORIES · FIVE CONTINENTS</span></div>
+      <div class="side"><b>THURSDAY</b><span>8 STORIES · FIVE CONTINENTS</span></div>
     </div>
   </div>
 
-  <div class="nums"><div class="num"><b>$45<em>bn</em></b><span>EU loan offered to Ukraine</span></div><div class="num"><b>10.3<em>m</em></b><span>GTA VI copies pre-ordered</span></div><div class="num"><b>825<em>m</em></b><span>Shares sold in the ANT listing</span></div><div class="num"><b>5,433<em></em></b><span>Ebola deaths in DR Congo</span></div><div class="num"><b>173<em>AU</em></b><span>Voyager 1, one light-day out</span></div><div class="num"><b>6<em>%</em></b><span>Cut pledged by 2035 plans</span></div></div>
-
   <div class="lead">
     <div class="leadart">
-      <svg width="392" height="158" viewBox="0 0 392 158" xmlns="http://www.w3.org/2000/svg">
-        <rect width="392" height="158" fill="#12100b"/>
-<rect x="8" y="146" width="376" height="3" fill="#4f6d92"/>
-<rect x="8" y="8" width="108" height="64" fill="#b8332b"/><rect x="8" y="12.923076923076923" width="108" height="4.9" fill="#f2ebdd"/><rect x="8" y="22.76923076923077" width="108" height="4.9" fill="#f2ebdd"/><rect x="8" y="32.61538461538461" width="108" height="4.9" fill="#f2ebdd"/><rect x="8" y="42.46153846153847" width="108" height="4.9" fill="#f2ebdd"/><rect x="8" y="52.30769230769231" width="108" height="4.9" fill="#f2ebdd"/><rect x="8" y="62.15384615384616" width="108" height="4.9" fill="#f2ebdd"/><rect x="8" y="8" width="45.4" height="34.5" fill="#2f4b7c"/><circle cx="15.6" cy="14.9" r="2.2" fill="#f2ebdd"/><circle cx="23.1" cy="14.9" r="2.2" fill="#f2ebdd"/><circle cx="30.7" cy="14.9" r="2.2" fill="#f2ebdd"/><circle cx="38.2" cy="14.9" r="2.2" fill="#f2ebdd"/><circle cx="45.8" cy="14.9" r="2.2" fill="#f2ebdd"/><circle cx="15.6" cy="21.8" r="2.2" fill="#f2ebdd"/><circle cx="23.1" cy="21.8" r="2.2" fill="#f2ebdd"/><circle cx="30.7" cy="21.8" r="2.2" fill="#f2ebdd"/><circle cx="38.2" cy="21.8" r="2.2" fill="#f2ebdd"/><circle cx="45.8" cy="21.8" r="2.2" fill="#f2ebdd"/><circle cx="15.6" cy="28.7" r="2.2" fill="#f2ebdd"/><circle cx="23.1" cy="28.7" r="2.2" fill="#f2ebdd"/><circle cx="30.7" cy="28.7" r="2.2" fill="#f2ebdd"/><circle cx="38.2" cy="28.7" r="2.2" fill="#f2ebdd"/><circle cx="45.8" cy="28.7" r="2.2" fill="#f2ebdd"/><circle cx="15.6" cy="35.6" r="2.2" fill="#f2ebdd"/><circle cx="23.1" cy="35.6" r="2.2" fill="#f2ebdd"/><circle cx="30.7" cy="35.6" r="2.2" fill="#f2ebdd"/><circle cx="38.2" cy="35.6" r="2.2" fill="#f2ebdd"/><circle cx="45.8" cy="35.6" r="2.2" fill="#f2ebdd"/>
-<rect x="142" y="8" width="108" height="64" fill="#c8342c"/><polygon points="160.4,15.7 162.8,23.2 170.7,23.2 164.3,27.8 166.8,35.4 160.4,30.7 154.0,35.4 156.4,27.8 150.0,23.2 157.9,23.2" fill="#f5d76e"/><polygon points="178.7,10.4 179.6,13.2 182.5,13.2 180.2,14.9 181.1,17.6 178.7,15.9 176.4,17.6 177.3,14.9 174.9,13.2 177.8,13.2" fill="#f5d76e"/><polygon points="187.4,16.8 188.3,19.6 191.1,19.6 188.8,21.3 189.7,24.0 187.4,22.3 185.0,24.0 185.9,21.3 183.6,19.6 186.5,19.6" fill="#f5d76e"/><polygon points="187.4,28.4 188.3,31.1 191.1,31.1 188.8,32.8 189.7,35.5 187.4,33.8 185.0,35.5 185.9,32.8 183.6,31.1 186.5,31.1" fill="#f5d76e"/><polygon points="178.7,34.8 179.6,37.5 182.5,37.5 180.2,39.2 181.1,41.9 178.7,40.2 176.4,41.9 177.3,39.2 174.9,37.5 177.8,37.5" fill="#f5d76e"/>
-<rect x="276" y="8.0" width="108" height="21.3" fill="#f2ebdd"/><rect x="276" y="29.3" width="108" height="21.3" fill="#2b3a63"/><rect x="276" y="50.7" width="108" height="21.3" fill="#c8342c"/>
-<text x="62" y="84" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="7"
-      font-weight="700" letter-spacing="1.6" fill="#9a9182">UNITED STATES</text>
-<text x="196" y="84" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="7"
-      font-weight="700" letter-spacing="1.6" fill="#9a9182">CHINA</text>
-<text x="330" y="84" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="7"
-      font-weight="700" letter-spacing="1.6" fill="#9a9182">RUSSIA</text>
-<rect x="8" y="92" width="376" height="34" fill="#f2ebdd"/>
-<text x="196" y="115" text-anchor="middle" font-family="Arial Black, Helvetica, sans-serif"
-      font-size="20" fill="#12100b" textLength="150" lengthAdjust="spacingAndGlyphs">SHENZHEN</text>
-<text x="196" y="140" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
-      font-size="8" font-weight="700" letter-spacing="2.2" fill="#d8cebb">NO JOINT COMMUNIQUE AGREED</text>
+      <svg width="392" height="181" viewBox="0 0 392 181" xmlns="http://www.w3.org/2000/svg">
+        <rect width="392" height="181" fill="#12100b"/>
+        <path d="M6 166 Q 196 74 386 166" stroke="#4f6d92" stroke-width="3.4" fill="none"/>
+        <path d="M24 166 Q 196 96 368 166" stroke="#4f6d92" stroke-width="1.7" fill="none" opacity=".5"/>
+        <g transform="translate(24 11)">
+          <rect width="92" height="58" fill="#ffffff"/>
+          <g fill="#b01e2e"><rect width="92" height="8.4"/><rect y="16.6" width="92" height="8.4"/>
+            <rect y="33.2" width="92" height="8.4"/><rect y="49.8" width="92" height="8.2"/></g>
+          <rect width="41" height="33" fill="#28365f"/>
+          <g fill="#ffffff">
+            <circle cx="7" cy="6.5" r="2"/><circle cx="17" cy="6.5" r="2"/><circle cx="27" cy="6.5" r="2"/>
+            <circle cx="12" cy="16" r="2"/><circle cx="23" cy="16" r="2"/>
+            <circle cx="7" cy="25" r="2"/><circle cx="17" cy="25" r="2"/><circle cx="27" cy="25" r="2"/>
+          </g>
+          <rect y="58" width="92" height="6.3" fill="#333"/>
+          <rect x="44" y="64.3" width="4" height="13" fill="#7d7466"/>
+        </g>
+        <g transform="translate(150 11)">
+          <rect width="92" height="58" fill="#c1121c"/>
+          <path d="M15.5 5.5 l3.6 10.2 h10.8l-8.8 6.7 3.3 10.5-8.9-6.6-8.9 6.6 3.3-10.5-8.8-6.7h10.8z" fill="#f6d64b"/>
+          <g fill="#f6d64b">
+            <circle cx="43" cy="8.6" r="3.3"/><circle cx="50" cy="17.5" r="3.3"/>
+            <circle cx="43" cy="26.4" r="3.3"/><circle cx="36" cy="17.5" r="3.3"/>
+          </g>
+          <rect y="58" width="92" height="6.3" fill="#6b2a24"/>
+          <rect x="44" y="64.3" width="4" height="13" fill="#7d7466"/>
+        </g>
+        <g transform="translate(276 11)">
+          <rect width="92" height="58" fill="#ffffff"/>
+          <rect y="19.3" width="92" height="19.3" fill="#0b4bae"/>
+          <rect y="38.6" width="92" height="19.4" fill="#c41b26"/>
+          <rect y="58" width="92" height="6.3" fill="#565e6b"/>
+          <rect x="44" y="64.3" width="4" height="13" fill="#7d7466"/>
+        </g>
+        <rect x="24" y="92" width="344" height="43" fill="#efe7d6"/>
+        <text x="196" y="122" text-anchor="middle" font-family="Arial Black, Helvetica, sans-serif"
+              font-size="25" fill="#12100b" letter-spacing="2">SHENZHEN</text>
+        <text x="196" y="163" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+              font-size="10" fill="#9fb2c8" letter-spacing="2.8">FIRST US–CHINA–RUSSIA SUMMIT</text>
       </svg>
     </div>
     <div class="leadcopy">
       <div class="tag">LEAD STORY · ASIA-PACIFIC</div>
-      <div class="hl">THREE NUCLEAR POWERS MEET IN SHENZHEN</div>
-      <div class="sub">Trump, Xi and Putin hold their first trilateral summit on the sidelines of APEC.
-        No joint communiqué is agreed; officials say the text is still being worked on.</div>
+      <div class="hl">THREE NUCLEAR POWERS<br>MEET IN SHENZHEN</div>
+      <div class="sub">Trump, Xi and Putin hold their first trilateral summit on the sidelines of APEC. No joint communiqué is agreed; officials say the text is still being worked on.</div>
     </div>
   </div>
 
   <div class="grid">
+
     <div class="tile">
-      <div class="art"><svg width="230" height="150" viewBox="0 0 230 150" xmlns="http://www.w3.org/2000/svg">
-        <rect width="230" height="150" fill="#12100b"/>
-<text x="16" y="24" font-family="Helvetica, Arial, sans-serif" font-size="8" font-weight="700"
-      letter-spacing="2.4" fill="#c9bda6">GRAND THEFT AUTO</text>
-<circle cx="188" cy="30" r="17" fill="#c8342c"/>
-<text x="188" y="34" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
-      font-size="8.5" font-weight="700" letter-spacing=".4" fill="#f2ebdd">15 YRS</text>
-<text x="16" y="116" font-family="Arial Black, Helvetica, sans-serif" font-size="86"
-      fill="#f2ebdd" textLength="86" lengthAdjust="spacingAndGlyphs">VI</text>
-<rect x="118" y="76" width="96" height="34" fill="none" stroke="#3a352c" stroke-width="1"/>
-<text x="126" y="89" font-family="Helvetica, Arial, sans-serif" font-size="7.4"
-      font-weight="700" letter-spacing="1.4" fill="#8d8271">PRE-ORDERED</text>
-<text x="126" y="103" font-family="Arial Black, Helvetica, sans-serif" font-size="14"
-      fill="#f2ebdd">10.3m copies</text>
-<rect x="16" y="126" width="198" height="16" fill="#c8342c"/>
-<text x="115.0" y="138" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
-      font-size="8" font-weight="700" letter-spacing="1.8" fill="#f2ebdd">OUT NOW · $79.99</text>
+      <div class="art"><svg width="100%" height="100%" viewBox="0 0 230 212" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+        <rect width="230" height="212" fill="#efe7d6"/>
+        <rect x="10" y="12" width="100" height="76" fill="#ffffff" stroke="#c9bfa8" stroke-width="1.5"/>
+        <rect x="10" y="12" width="100" height="25.3" fill="#e8892b"/>
+        <rect x="10" y="62.7" width="100" height="25.3" fill="#1b7a45"/>
+        <circle cx="60" cy="50" r="12.5" fill="none" stroke="#2b2f8f" stroke-width="2.6"/>
+        <line x1="60" y1="37.5" x2="60" y2="62.5" stroke="#2b2f8f" stroke-width="2.6"/>
+        <rect x="120" y="12" width="100" height="76" fill="#ffffff" stroke="#c9bfa8" stroke-width="1.5"/>
+        <circle cx="170" cy="50" r="25" fill="#c1121c"/>
+        <rect x="10" y="100" width="210" height="40" fill="#12100b"/>
+        <text x="115" y="128" text-anchor="middle" font-family="Arial Black, Helvetica, sans-serif"
+              font-size="23" fill="#f2ebdd" textLength="190" lengthAdjust="spacingAndGlyphs">$10 BILLION</text>
+        <rect x="10" y="150" width="210" height="40" fill="#12100b"/>
+        <text x="115" y="178" text-anchor="middle" font-family="Arial Black, Helvetica, sans-serif"
+              font-size="23" fill="#e8892b" textLength="196" lengthAdjust="spacingAndGlyphs">DEFENCE PACT</text>
       </svg></div>
-      <div class="place"><span class="chip">1</span>New York · Culture</div>
-      <div class="lab">GTA VI GOES<br>ON SALE AT LAST</div>
-      <div class="det">Fifteen years after GTA V, Rockstar's sequel launches on PS5 and Xbox. 10.3m copies were pre-ordered.</div>
-    </div><div class="tile">
-      <div class="art"><svg width="230" height="150" viewBox="0 0 230 150" xmlns="http://www.w3.org/2000/svg">
-        <rect width="230" height="150" fill="#efe7d6"/>
-<rect x="14" y="14" width="46" height="19" fill="#12100b"/>
-<text x="37" y="27" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
-      font-size="9.5" font-weight="700" letter-spacing="1.6" fill="#f2ebdd">ANT</text>
-<text x="216" y="27" text-anchor="end" font-family="Helvetica, Arial, sans-serif"
-      font-size="8" font-weight="700" letter-spacing="1.4" fill="#5f5647">NASDAQ</text>
-<line x1="14" y1="126" x2="216" y2="126" stroke="#12100b" stroke-width="4"/>
-<rect x="30" y="105" width="26" height="21" fill="#a99e88"/>
-<rect x="70" y="88" width="26" height="38" fill="#a99e88"/>
-<rect x="110" y="62" width="26" height="64" fill="#c8342c"/>
-<rect x="150" y="40" width="26" height="86" fill="#9e2018"/>
-<path d="M196 120 L 202 34" stroke="#9e2018" stroke-width="4"/>
-<path d="M192 44 L 202 32 L 212 44" stroke="#9e2018" stroke-width="4" fill="none"/>
-<text x="112" y="140" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
-      font-size="7.6" font-weight="700" letter-spacing="1.7" fill="#5f5647">FIRST TRADING DAY</text>
-      </svg></div>
-      <div class="place"><span class="chip">2</span>New York · Markets</div>
-      <div class="lab">ANTHROPIC OPENS<br>ON THE NASDAQ</div>
-      <div class="det">The AI lab trades as ANT after pricing 825m shares at $70-78, one of the largest listings ever.</div>
-    </div><div class="tile">
-      <div class="art"><svg width="230" height="150" viewBox="0 0 230 150" xmlns="http://www.w3.org/2000/svg">
-        <rect width="230" height="150" fill="#1a3a8f"/>
-<circle cx="115" cy="15" r="2.8" fill="#f5d76e"/><circle cx="115" cy="29" r="2.8" fill="#f5d76e"/><circle cx="115" cy="43" r="2.8" fill="#f5d76e"/><circle cx="115" cy="57" r="2.8" fill="#f5d76e"/><circle cx="115" cy="71" r="2.8" fill="#f5d76e"/><circle cx="80" cy="15" r="2.8" fill="#f5d76e"/><circle cx="80" cy="29" r="2.8" fill="#f5d76e"/><circle cx="80" cy="43" r="2.8" fill="#f5d76e"/><circle cx="80" cy="57" r="2.8" fill="#f5d76e"/><circle cx="80" cy="71" r="2.8" fill="#f5d76e"/><circle cx="150" cy="15" r="2.8" fill="#f5d76e"/><circle cx="150" cy="29" r="2.8" fill="#f5d76e"/><circle cx="150" cy="43" r="2.8" fill="#f5d76e"/><circle cx="150" cy="57" r="2.8" fill="#f5d76e"/><circle cx="150" cy="71" r="2.8" fill="#f5d76e"/>
-<rect x="16" y="98" width="86" height="36" fill="#f2ebdd"/>
-<text x="59" y="124" text-anchor="middle" font-family="Arial Black, Helvetica, sans-serif"
-      font-size="18" fill="#12100b">&#8364;25B</text>
-<rect x="126" y="98" width="86" height="36" fill="#d97318"/>
-<text x="169" y="124" text-anchor="middle" font-family="Arial Black, Helvetica, sans-serif"
-      font-size="18" fill="#12100b">&#8364;20B</text>
-<text x="115" y="144" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
-      font-size="7.6" font-weight="700" letter-spacing="1.7" fill="#cfd8ee">ARMS + BUDGET</text>
-      </svg></div>
-      <div class="place"><span class="chip">3</span>Brussels · European Union</div>
-      <div class="lab">EU OFFERS UKRAINE<br>A &#8364;45BN LOAN</div>
-      <div class="det">&#8364;25bn for arms, &#8364;20bn for the budget, repaid only once Russia pays reparations.</div>
-    </div><div class="tile">
-      <div class="art"><svg width="230" height="150" viewBox="0 0 230 150" xmlns="http://www.w3.org/2000/svg">
-        <rect width="230" height="150" fill="#efe7d6"/>
-<rect x="14" y="12" width="84" height="54" fill="#f28c28"/>
-<rect x="14" y="12" width="84" height="18" fill="#ffffff"/>
-<rect x="14" y="30" width="84" height="18" fill="#128807"/>
-<circle cx="42" cy="36" r="7.5" fill="none" stroke="#1a3a8f" stroke-width="1.8"/>
-<circle cx="42" cy="36" r="2" fill="#1a3a8f"/>
-<rect x="118" y="12" width="84" height="54" fill="#ffffff"/>
-<circle cx="160" cy="39" r="14" fill="#bc002d"/>
-<rect x="14" y="82" width="188" height="20" fill="#12100b"/>
-<text x="108" y="96" text-anchor="middle" font-family="Arial Black, Helvetica, sans-serif"
-      font-size="12" fill="#f2ebdd" textLength="150" lengthAdjust="spacingAndGlyphs">$10 BILLION</text>
-<rect x="14" y="106" width="188" height="20" fill="#d97318"/>
-<text x="108" y="120" text-anchor="middle" font-family="Arial Black, Helvetica, sans-serif"
-      font-size="12" fill="#12100b" textLength="132" lengthAdjust="spacingAndGlyphs">DEFENCE PACT</text>
-<text x="110" y="142" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
-      font-size="7.4" font-weight="700" letter-spacing="1.5" fill="#5f5647">16TH ANNUAL SUMMIT</text>
-      </svg></div>
-      <div class="place"><span class="chip">4</span>New Delhi · India</div>
+      <div class="place">New Delhi · India</div>
       <div class="lab">INDIA AND JAPAN<br>BOLSTER DEFENCE</div>
       <div class="det">Modi and Takaichi agree a joint defence project, AI and chip rules, and $10bn of Japanese bank money.</div>
-    </div><div class="tile">
-      <div class="art"><svg width="230" height="150" viewBox="0 0 230 150" xmlns="http://www.w3.org/2000/svg">
-        <rect width="230" height="150" fill="#efe7d6"/>
-<text x="16" y="44" font-family="Arial Black, Helvetica, sans-serif" font-size="32"
-      fill="#12100b" textLength="58" lengthAdjust="spacingAndGlyphs">6%</text>
-<text x="84" y="26" font-family="Helvetica, Arial, sans-serif" font-size="7.6" font-weight="700"
-      letter-spacing="1.4" fill="#5f5647">PLEDGED</text>
-<text x="84" y="38" font-family="Helvetica, Arial, sans-serif" font-size="7.6" font-weight="700"
-      letter-spacing="1.4" fill="#5f5647">BY 2035</text>
-<text x="214" y="26" text-anchor="end" font-family="Helvetica, Arial, sans-serif"
-      font-size="7.6" font-weight="700" letter-spacing="1.4" fill="#9e2018">60% NEEDED</text>
-<text x="214" y="38" text-anchor="end" font-family="Helvetica, Arial, sans-serif"
-      font-size="7.6" font-weight="700" letter-spacing="1.4" fill="#9e2018">FOR 1.5&#176;C</text>
-<rect x="16" y="62" width="198" height="18" fill="#ddd2bd"/>
-<rect x="16" y="62" width="19.8" height="18" fill="#c8342c"/>
-<line x1="65.5" y1="58" x2="65.5" y2="82" stroke="#a99e88" stroke-width="1"/><line x1="115.0" y1="58" x2="115.0" y2="82" stroke="#a99e88" stroke-width="1"/><line x1="164.5" y1="58" x2="164.5" y2="82" stroke="#a99e88" stroke-width="1"/>
-<line x1="214" y1="56" x2="214" y2="86"
-      stroke="#9e2018" stroke-width="3"/>
-<text x="16" y="120" font-family="Helvetica, Arial, sans-serif" font-size="7.6"
-      font-weight="700" letter-spacing="1.5" fill="#5f5647">154 NATIONAL PLANS TALLIED</text>
-<text x="16" y="138" font-family="Helvetica, Arial, sans-serif" font-size="7.6"
-      font-weight="700" letter-spacing="1.5" fill="#5f5647">COP31'S LAST WEEK IN ANTALYA</text>
+    </div>
+
+    <div class="tile">
+      <div class="art"><svg width="100%" height="100%" viewBox="0 0 230 212" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+        <rect width="230" height="212" fill="#efe7d6"/>
+        <line x1="12" y1="182" x2="218" y2="182" stroke="#12100b" stroke-width="4"/>
+        <rect x="18" y="146" width="28" height="36" fill="#12100b"/>
+        <rect x="54" y="118" width="28" height="64" fill="#12100b"/>
+        <rect x="90" y="92" width="28" height="90" fill="#12100b"/>
+        <rect x="126" y="44" width="28" height="138" fill="#9e2018"/>
+        <path d="M166 172 L 206 44" stroke="#9e2018" stroke-width="7" fill="none"/>
+        <path d="M192 34 L 215 39 L 201 59 Z" fill="#9e2018"/>
+        <rect x="14" y="14" width="58" height="24" fill="#12100b"/>
+        <text x="43" y="32" text-anchor="middle" font-family="Arial Black, Helvetica, sans-serif"
+              font-size="16" fill="#f2ebdd" letter-spacing="2">ANT</text>
+        <text x="115" y="202" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+              font-size="10" fill="#5f5647" letter-spacing="1.8">FIRST TRADING DAY</text>
       </svg></div>
-      <div class="place"><span class="chip">5</span>Antalya · Climate</div>
-      <div class="lab">COP31 ENTERS<br>ITS FINAL WEEK</div>
-      <div class="det">154 national plans add up to a 6% cut by 2035 against 2019, far short of the 60% needed for 1.5&#176;C.</div>
-    </div><div class="tile">
-      <div class="art"><svg width="230" height="150" viewBox="0 0 230 150" xmlns="http://www.w3.org/2000/svg">
-        <rect width="230" height="150" fill="#efe7d6"/>
-<line x1="16" y1="126" x2="214" y2="126" stroke="#12100b" stroke-width="4"/>
-<rect x="26" y="102" width="24" height="24" fill="#a99e88"/>
-<rect x="66" y="90" width="24" height="36" fill="#a99e88"/>
-<rect x="106" y="62" width="24" height="64" fill="#d97318"/>
-<rect x="146" y="32" width="24" height="94" fill="#9e2018"/>
-<circle cx="190" cy="46" r="25" fill="#f2ebdd" stroke="#9e2018" stroke-width="3"/>
-<rect x="184" y="32" width="12" height="28" fill="#9e2018"/>
-<rect x="176" y="40" width="28" height="12" fill="#9e2018"/>
-<text x="112" y="142" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
-      font-size="7.6" font-weight="700" letter-spacing="1.7" fill="#5f5647">7 PROVINCES AFFECTED</text>
+      <div class="place">New York · United States</div>
+      <div class="lab">ANTHROPIC OPENS<br>ON THE NASDAQ</div>
+      <div class="det">The AI lab trades as ANT after pricing 825m shares at $70–78, one of the largest listings ever.</div>
+    </div>
+
+    <div class="tile">
+      <div class="art"><svg width="100%" height="100%" viewBox="0 0 230 212" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+        <rect width="230" height="212" fill="#0b3a8c"/>
+        <g fill="#f6d64b">
+          <circle cx="115" cy="34" r="4.6"/><circle cx="115" cy="88" r="4.6"/>
+          <circle cx="88" cy="50" r="4.6"/><circle cx="88" cy="72" r="4.6"/>
+          <circle cx="142" cy="50" r="4.6"/><circle cx="142" cy="72" r="4.6"/>
+        </g>
+        <rect x="12" y="116" width="98" height="56" fill="#efe7d6"/>
+        <text x="61" y="152" text-anchor="middle" font-family="Arial Black, Helvetica, sans-serif"
+              font-size="27" fill="#0b3a8c">€25B</text>
+        <rect x="120" y="116" width="98" height="56" fill="#e8892b"/>
+        <text x="169" y="152" text-anchor="middle" font-family="Arial Black, Helvetica, sans-serif"
+              font-size="27" fill="#12100b">€20B</text>
+        <rect x="12" y="180" width="206" height="22" fill="#efe7d6"/>
+        <text x="115" y="196" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+              font-size="10.5" font-weight="bold" fill="#0b3a8c" letter-spacing="1.6">ARMS + BUDGET</text>
       </svg></div>
-      <div class="place"><span class="chip">6</span>Eastern DR Congo · Africa</div>
+      <div class="place">Brussels · European Union</div>
+      <div class="lab">EU OFFERS UKRAINE<br>A €45BN LOAN</div>
+      <div class="det">Repaid only once Russia pays reparations. Leaders meet in Berlin to keep the coalition of the willing together.</div>
+    </div>
+
+    <div class="tile">
+      <div class="art"><svg width="100%" height="100%" viewBox="0 0 230 212" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+        <rect width="230" height="212" fill="#efe7d6"/>
+        <rect x="10" y="14" width="100" height="66" fill="#ffffff" stroke="#c9bfa8" stroke-width="1.5"/>
+        <g fill="#b01e2e"><rect x="10" y="14" width="100" height="9.5"/><rect x="10" y="32.9" width="100" height="9.5"/>
+          <rect x="10" y="51.8" width="100" height="9.4"/></g>
+        <rect x="10" y="14" width="45" height="9.5" fill="#28365f"/>
+        <rect x="120" y="14" width="100" height="66" fill="#f6d64b"/>
+        <rect x="120" y="36" width="100" height="22" fill="#0b3a8c"/>
+        <rect x="120" y="58" width="100" height="22" fill="#c1121c"/>
+        <g fill="#ffffff">
+          <circle cx="170" cy="55" r="2.7"/><circle cx="180" cy="52" r="2.7"/><circle cx="187" cy="45" r="2.7"/>
+          <circle cx="189" cy="36" r="2.7"/><circle cx="187" cy="28" r="2.7"/><circle cx="180" cy="21" r="2.7"/>
+          <circle cx="170" cy="18" r="2.7"/>
+        </g>
+        <rect x="10" y="86" width="210" height="6" fill="#12100b"/>
+        <rect x="10" y="96" width="210" height="34" fill="#12100b"/>
+        <text x="115" y="119" text-anchor="middle" font-family="Arial Black, Helvetica, sans-serif"
+              font-size="18" fill="#f2ebdd" textLength="190" lengthAdjust="spacingAndGlyphs">TRAINING · INTEL</text>
+        <rect x="10" y="138" width="210" height="34" fill="#12100b"/>
+        <text x="115" y="161" text-anchor="middle" font-family="Arial Black, Helvetica, sans-serif"
+              font-size="18" fill="#e8892b" textLength="190" lengthAdjust="spacingAndGlyphs">TIES RESTORED</text>
+        <text x="115" y="196" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+              font-size="10.5" fill="#5f5647" letter-spacing="1.4">HEGSETH SIGNS IN CARACAS</text>
+      </svg></div>
+      <div class="place">Caracas · Venezuela</div>
+      <div class="lab">US AND VENEZUELA<br>REBUILD TIES</div>
+      <div class="det">Hegseth signs an accord on joint training and intelligence sharing, after the fall of Maduro.</div>
+    </div>
+
+    <div class="tile">
+      <div class="art"><svg width="100%" height="100%" viewBox="0 0 230 212" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+        <rect width="230" height="212" fill="#0d1418"/>
+        <g fill="#ffffff" opacity=".7">
+          <circle cx="26" cy="20" r="1.4"/><circle cx="66" cy="10" r="1.6"/><circle cx="120" cy="24" r="1.3"/>
+          <circle cx="172" cy="12" r="1.5"/><circle cx="208" cy="34" r="1.3"/><circle cx="92" cy="40" r="1.2"/>
+          <circle cx="148" cy="46" r="1.3"/><circle cx="48" cy="54" r="1.2"/><circle cx="196" cy="60" r="1.1"/>
+        </g>
+        <circle cx="40" cy="128" r="34" fill="#3f8fc4"/>
+        <path d="M18 116 q14 -10 27 3 q-9 8 -20 1 q-11 -5 -7 -4z" fill="#2f7a4d"/>
+        <path d="M16 136 q16 11 34 -2" fill="#2f7a4d" opacity=".75"/>
+        <path d="M74 128 q44 -30 86 -20 q34 6 46 -34" stroke="#e8892b" stroke-width="3"
+              fill="none" stroke-dasharray="8 7"/>
+        <g transform="translate(170 96) rotate(-18)">
+          <rect x="-20" y="-18" width="40" height="36" fill="#d9cfb8"/>
+          <path d="M-20 -18 l-14 -12 l4 20 z" fill="#8c8371"/>
+          <path d="M20 -18 l14 -12 l-4 20 z" fill="#8c8371"/>
+          <circle cx="0" cy="-4" r="8" fill="#0d1418"/>
+          <rect x="-6" y="8" width="12" height="10" fill="#8c8371"/>
+        </g>
+        <line x1="115" y1="158" x2="115" y2="170" stroke="#e8892b" stroke-width="2"/>
+        <text x="115" y="193" text-anchor="middle" font-family="Arial Black, Helvetica, sans-serif"
+              font-size="19" fill="#e8892b" textLength="132" lengthAdjust="spacingAndGlyphs">25.9bn km</text>
+        <text x="115" y="207" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+              font-size="9.5" fill="#8d8271" letter-spacing="1.5">FROM EARTH</text>
+      </svg></div>
+      <div class="place">Deep space · Science</div>
+      <div class="lab">VOYAGER 1 IS A<br>LIGHT-DAY OUT</div>
+      <div class="det">The probe is 173 AU away, so its radio whispers now take a full day to reach Earth.</div>
+    </div>
+
+    <div class="tile">
+      <div class="art"><svg width="100%" height="100%" viewBox="0 0 230 212" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+        <rect width="230" height="212" fill="#efe7d6"/>
+        <line x1="12" y1="184" x2="218" y2="184" stroke="#12100b" stroke-width="4"/>
+        <rect x="16" y="152" width="24" height="32" fill="#8d8271"/>
+        <rect x="46" y="128" width="24" height="56" fill="#8d8271"/>
+        <rect x="76" y="102" width="24" height="82" fill="#c8603c"/>
+        <rect x="106" y="62" width="24" height="122" fill="#9e2018"/>
+        <g transform="translate(178 74)">
+          <circle cx="0" cy="0" r="40" fill="#ffffff" stroke="#12100b" stroke-width="4"/>
+          <rect x="-8" y="-24" width="16" height="48" fill="#9e2018"/>
+          <rect x="-24" y="-8" width="48" height="16" fill="#9e2018"/>
+        </g>
+        <text x="115" y="204" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+              font-size="10.5" fill="#5f5647" letter-spacing="1.6">7 PROVINCES AFFECTED</text>
+      </svg></div>
+      <div class="place">Eastern DR Congo · Africa</div>
       <div class="lab">EBOLA TOLL PASSES<br>5,400 DEAD</div>
       <div class="det">The Bundibugyo outbreak is the second largest on record. MSF says the response is still losing ground.</div>
-    </div><div class="tile">
-      <div class="art"><svg width="230" height="150" viewBox="0 0 230 150" xmlns="http://www.w3.org/2000/svg">
-        <rect width="230" height="150" fill="#12100b"/>
-<circle cx="60" cy="26" r="13" fill="#f2ebdd"/><rect x="44" y="40" width="32" height="60" rx="15" fill="#f2ebdd"/><line x1="48" y1="14" x2="74" y2="4" stroke="#c8342c" stroke-width="7"/><circle cx="115" cy="26" r="13" fill="#f2ebdd"/><rect x="99" y="40" width="32" height="60" rx="15" fill="#f2ebdd"/><line x1="103" y1="14" x2="129" y2="4" stroke="#c8342c" stroke-width="7"/><circle cx="170" cy="26" r="13" fill="#f2ebdd"/><rect x="154" y="40" width="32" height="60" rx="15" fill="#f2ebdd"/><line x1="158" y1="14" x2="184" y2="4" stroke="#c8342c" stroke-width="7"/>
-<rect x="24" y="114" width="182" height="22" fill="#c8342c"/>
-<text x="115.0" y="128" text-anchor="middle" font-family="Arial Black, Helvetica, sans-serif"
-      font-size="12" fill="#f2ebdd" textLength="164" lengthAdjust="spacingAndGlyphs">NATIONWIDE STRIKE</text>
-<text x="115.0" y="144" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
-      font-size="7.4" font-weight="700" letter-spacing="1.5" fill="#8d8271">FIVE CITIES HALTED</text>
-      </svg></div>
-      <div class="place"><span class="chip">7</span>Bogot&#225; · Latin America</div>
-      <div class="lab">UNIONS SHUT DOWN<br>FIVE CITIES</div>
-      <div class="det">A walkout against the government's rescue bill halts transport, schools and ports across Colombia.</div>
-    </div><div class="tile">
-      <div class="art"><svg width="230" height="150" viewBox="0 0 230 150" xmlns="http://www.w3.org/2000/svg">
-        <rect width="230" height="150" fill="#efe7d6"/>
-<g transform="translate(115.0 74)">
-  <path d="M-74 8 q20 -30 54 -34 q-14 -18 6 -26 q10 -5 14 6 q26 -12 74 4 q-26 6 -40 20 q-14 14 -40 14 q-30 0 -44 22 q-14 -6 -24 -6z"
-        fill="#12100b"/>
-  <path d="M-30 -22 q22 -8 40 4" stroke="#12100b" stroke-width="4" fill="none"/>
-  <path d="M-4 -40 l10 6" stroke="#12100b" stroke-width="4"/>
-  <circle cx="12" cy="-42" r="3" fill="#12100b"/>
-</g>
-<path d="M36 134 l16 -16 l14 13 l16 -17 l16 13 l14 -15 l16 13 l16 -17 l14 13"
-      stroke="#9e2018" stroke-width="4" fill="none"/>
-<text x="115.0" y="148" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
-      font-size="7.6" font-weight="700" letter-spacing="1.7" fill="#5f5647">TRUCE UNDER STRAIN</text>
-      </svg></div>
-      <div class="place"><span class="chip">8</span>Gaza · Middle East</div>
-      <div class="lab">TRUCE STRAINED<br>BY NEW STRIKES</div>
-      <div class="det">Israeli strikes continue as mediators push both sides towards a second phase of the ceasefire.</div>
     </div>
-  </div>
 
-  <div class="band">
-    <div class="mapwrap">
-      <div class="maplab">Where it happened</div>
-      <div class="reg">
-          <div class="regname">Asia-Pacific</div>
-          <div class="regnums">4 9</div>
-          <div class="regtext">India&#8211;Japan pact, Shenzhen summit</div>
-        </div><div class="reg">
-          <div class="regname">Americas</div>
-          <div class="regnums">1 2 7</div>
-          <div class="regtext">GTA VI, Anthropic, Colombia, Venezuela</div>
-        </div><div class="reg">
-          <div class="regname">Europe</div>
-          <div class="regnums">3 5</div>
-          <div class="regtext">EU loan, COP31 in Antalya</div>
-        </div><div class="reg">
-          <div class="regname">Africa</div>
-          <div class="regnums">6</div>
-          <div class="regtext">Ebola in eastern DR Congo</div>
-        </div><div class="reg">
-          <div class="regname">Middle East</div>
-          <div class="regnums">8</div>
-          <div class="regtext">Gaza truce under strain</div>
-        </div>
+    <div class="tile">
+      <div class="art"><svg width="100%" height="100%" viewBox="0 0 230 212" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+        <rect width="230" height="212" fill="#12100b"/>
+        <line x1="16" y1="186" x2="214" y2="186" stroke="#f2ebdd" stroke-width="4"/>
+        <g fill="#f2ebdd">
+          <circle cx="48" cy="84" r="17"/><rect x="31" y="106" width="34" height="80" rx="9"/>
+          <circle cx="115" cy="80" r="18"/><rect x="97" y="103" width="36" height="83" rx="9"/>
+          <circle cx="182" cy="84" r="17"/><rect x="165" y="106" width="34" height="80" rx="9"/>
+        </g>
+        <g fill="#9e2018">
+          <rect x="24" y="52" width="44" height="10" rx="4" transform="rotate(-22 46 57)"/>
+          <rect x="93" y="48" width="46" height="10" rx="4" transform="rotate(-22 116 53)"/>
+          <rect x="160" y="52" width="44" height="10" rx="4" transform="rotate(-22 182 57)"/>
+        </g>
+        <text x="115" y="204" text-anchor="middle" font-family="Arial Black, Helvetica, sans-serif"
+              font-size="15" fill="#e8892b" textLength="196" lengthAdjust="spacingAndGlyphs">NATIONWIDE STRIKE</text>
+      </svg></div>
+      <div class="place">Bogotá · Colombia</div>
+      <div class="lab">UNIONS SHUT DOWN<br>FIVE CITIES</div>
+      <div class="det">A nationwide walkout against the government's rescue bill halts transport, schools and ports.</div>
     </div>
-    <div class="also">
-      <h3>Also on Thursday 19 November</h3>
-      <div class="items"><div><b>Voyager 1</b> is a full light-day out &#8212; 25.9bn km, and its radio now takes a day to arrive.</div><div><b>Oil</b> holds near $83 a barrel after a 3% slide the day before, as talks on Ukraine drag on.</div><div><b>Rohit Sharma</b> retires from Test cricket, closing an 18-year international career.</div><div><b>Saudi Arabia</b> is cleared to buy up to 48 F-35 fighters from the United States.</div><div><b>Dhaka</b> asks India to hand back Sheikh Hasina; she says she will be home by December.</div><div><b>Hakeem Jeffries</b> wins the Democratic nomination for House speaker.</div><div><b>Amazon</b> pledges $7bn for renewable power in India by 2030.</div><div><b>Berlin</b> gathers the coalition of the willing to keep Ukraine funded into 2027.</div><div><b>Caracas</b> and Washington sign a training and intelligence accord, after the fall of Maduro.</div></div>
+
+    <div class="tile">
+      <div class="art"><svg width="100%" height="100%" viewBox="0 0 230 212" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+        <rect width="230" height="212" fill="#efe7d6"/>
+        <g transform="translate(115 100)">
+          <path d="M-74 8 q20 -30 54 -34 q-14 -18 6 -26 q10 -5 14 6 q26 -12 74 4 q-26 6 -40 20 q-14 14 -40 14 q-30 0 -44 22 q-14 -6 -24 -6z"
+                fill="#12100b" transform="translate(0 0)"/>
+          <path d="M-30 -22 q22 -8 40 4" stroke="#12100b" stroke-width="4" fill="none"/>
+          <path d="M-4 -40 l10 6" stroke="#12100b" stroke-width="4"/>
+          <circle cx="12" cy="-42" r="3" fill="#12100b"/>
+        </g>
+        <path d="M40 168 l16 -18 l14 14 l16 -18 l16 14 l14 -16 l16 14 l16 -18 l14 14" 
+              stroke="#9e2018" stroke-width="4" fill="none"/>
+        <text x="115" y="200" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+              font-size="10.5" fill="#5f5647" letter-spacing="1.6">TRUCE UNDER STRAIN</text>
+      </svg></div>
+      <div class="place">Gaza · Middle East</div>
+      <div class="lab">TRUCE STRAINED<br>BY NEW STRIKES</div>
+      <div class="det">Israeli raids kill several Palestinians as mediators push both sides towards a second phase.</div>
     </div>
+
   </div>
 
   <div class="foot">
-    <div class="a"><b>DATE CHECK</b> &#183; every item above was reported on Thursday 19 November 2026.
-      The Shenzhen summit, the EU loan proposal and Voyager's milestone were filed late on Wednesday
-      18 November and confirmed on the 19th; GTA VI went on sale at midnight local time around the world.</div>
+    <div class="a">OIL HOLDS NEAR $83 · BERLIN MEETS ON UKRAINE · ROHIT SHARMA QUITS TESTS</div>
     <div class="b">THE WORLD ON 19 NOVEMBER 2026</div>
   </div>
 </div>
